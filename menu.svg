@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 98" width="100" height="98">
+	<title>menu-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #000000 } 
+	</style>
+	<g id="Layer">
+		<path id="Layer" class="shp0" d="M14 16C10.69 16 8 18.69 8 22C8 25.31 10.69 28 14 28L86 28C89.31 28 92 25.31 92 22C92 18.69 89.31 16 86 16L14 16ZM14 44C10.69 44 8 46.69 8 50C8 53.31 10.69 56 14 56L86 56C89.31 56 92 53.31 92 50C92 46.69 89.31 44 86 44L14 44ZM14 72C10.69 72 8 74.69 8 78C8 81.31 10.69 84 14 84L86 84C89.31 84 92 81.31 92 78C92 74.69 89.31 72 86 72L14 72Z" />
+	</g>
+</svg>
