@@ -19,13 +19,13 @@ header{
     padding: 0px;
     width: 100%;
     margin: 0%;
-    z-index: 2;
+    
     
 
 }
 
 header div.logo{
-    margin: 0px 30px 15px 30px;
+    margin: 0 3em 1.5em 3em;
     display: inline-block;
     width: max-content;
     
@@ -256,12 +256,15 @@ div.cartbtn{
     bottom: 20%;
     border-radius: 5px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 div.cartbtn img{
     width: 100%;
     height: auto;
     object-fit: cover;
+    object-position: top;
+    
 }
 
 section.about{
@@ -450,4 +453,426 @@ section.contact form.contact input.submit{
     color: #fff;
     cursor: pointer;
 
+}
+
+div.menu{
+    display: none;
+}
+
+div.cartbtn1{
+    display: none;
+}
+
+@media (max-width: 600px){
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    
+    }
+    
+    body{
+        margin: 0%;
+        padding: 0%;
+        font-family: sans-serif;
+        width: 100%;
+    }
+    
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0px;
+        width: 100%;
+        margin: 0%;
+    
+    }
+    
+    header div.logo{
+        margin: 1em 1em;
+        display: inline-block;
+        width: 20%;
+        cursor: pointer;
+       
+    }
+    
+    header div.logo h2{
+        font-family: 'Oleo Script';
+        font-weight: lighter;
+        font-size: 3em;
+        margin: 0px;
+        padding: 0%;
+
+    }
+    
+    header div.logo p{
+        font-family: 'Oleo Script';
+        font-size: 1.5em;
+        margin: 0px;
+        padding: 0%;
+        display: flex;
+        justify-content: flex-end;
+        line-height: 0%;
+        cursor: pointer;
+        
+        
+    }
+    
+    header nav{ 
+        display: none;
+    }
+    
+    header div.menu{
+        display: inline-block;
+        width: 20%;
+        margin: 1em 1em;
+    }
+
+    header div.menu img{
+        width: 100%;
+        height: auto;
+    }
+
+    div.homebtn{
+        display: none;
+    }
+
+    div.cartbtn{
+       display: none;
+    }
+  
+    div.cartbtn1{
+        display: inline-block;
+        width: 20%;
+        height: auto;
+        margin: 1em 1em;
+     }
+
+     div.cartbtn1 img{
+        width: 100%;
+        height: auto;
+     }
+    
+
+    
+    
+    section.home{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        color: #fff;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 1em 0%;
+        padding: 0%;
+        background-image: url(fondo.jpg);
+        background-size: cover;
+        background-position-x: center;
+        background-attachment: fixed;
+        width: 90%;
+        height: 70vh;
+        position: relative;
+        left: 5%;
+        border-radius: 5px;
+        
+    }
+    
+    section.home h2{
+        padding: 0 1em;
+        z-index: 1;
+    }
+    
+    .overlay{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.658);
+        position: absolute;
+        border-radius: 5px;
+    }
+    
+    section.shop{
+        margin: 10em 0;
+        width: 90%;
+        height: max-content;
+        position: relative;
+        left: 5%;
+        padding: 0%;
+        text-align: center;
+        
+      
+    }
+    
+    section.shop div{
+        text-align: center;
+    }
+    
+    section.shop div h2{
+        display: inline-block;
+        font-size: 2em;
+        width: max-content;
+        margin-bottom: 1em;
+        border-bottom: solid 0.2em rgb(7, 94, 36) ;
+    }
+    
+    
+    
+    section.shop  div p{
+        font-size: 1em;
+        font-weight: bold;
+    }
+    
+    section.shop div.arts{
+        margin: 2em 0;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-auto-rows: max-content;
+        gap: 2em;
+        width: 100%;
+        height: max-content;
+        
+    }
+    
+    .shop .arts div.item{
+        position: relative;
+        box-shadow: 1px 3px 5px #000;
+        height: 10em;
+        width: auto;
+        cursor: pointer;
+        overflow: hidden;
+    
+    }
+    
+    .shop .arts div .tittle2{
+        position: absolute;
+        text-transform: capitalize;
+        bottom: -7em;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        transition: all 0.3s ease;
+        width: 100%;
+        height: 10em;
+        
+    }
+    
+    
+    .shop .arts .item:hover > .tittle2{
+        bottom: 0%;
+    }
+    
+    
+    
+    .shop .arts div.item::before{
+        content: "";
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+        width: 100%;
+        height: 3em;
+        background-color:rgba(255, 255, 255, 0.815);
+        transition: all 0.3s ease;
+    
+    }
+    
+    .shop .arts div.item:hover:before{
+        background: #fff;
+        height: 10em;
+    
+    }
+    
+    .shop div img{
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    
+    
+    section.about{
+        margin: 10em 0;
+        width: 90%;
+        height: max-content;
+        padding: 0%;
+        position: relative;
+        left: 5%;  
+    }
+    
+    section.about div{
+        text-align: center;
+    
+    }
+    
+    section.about div h2{
+        display: inline-block;
+        font-size: 2em;
+        width: max-content;
+        margin-bottom: 1em;
+        border-bottom: solid 0.2em rgb(7, 94, 36) ;
+    }
+    
+    section.about div.info{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-auto-rows: max-content;
+        width: 100%;
+        height: max-content;
+        
+    }
+    
+    section.about div.info div:nth-child(1){
+        border-top-right-radius: 5px;
+        width: 100%;
+        height: 10em;
+        background-image: url(fondo.jpg);
+        background-attachment: fixed;
+        position: relative;
+    }
+    
+    section.about div.info div:nth-child(1)::before{
+        content: " ";
+        display: block;
+        position: relative;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to left, transparent, #fff);
+    
+    }
+    
+    
+    section.about div.info div:nth-child(2){
+        width: 100%;
+        height: 10em;
+        display: flex;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    section.about div.info div:nth-child(2) p{
+        font-size: 1em;
+        margin: .5em .5em;
+        
+    }
+    
+    section.about div.info div:nth-child(3){
+        width: 100%;
+        height: 10em;
+        display: flex;
+        justify-content: center;
+        text-align: right;
+        
+    }
+    
+    section.about div.info div:nth-child(3) p{
+        font-size: 1em;
+        margin: .5em .5em;
+        
+    }
+    
+    section.about div.info div:nth-child(4){
+        border-bottom-left-radius: 5px;
+        width: 100%;
+        height: 10em;
+        background: url(fondo.jpg);
+        background-attachment: fixed;
+    
+    }
+    
+    section.about div.info div:nth-child(4)::before{
+        content: " ";
+        position: relative;
+        display: block;
+        right: 0%;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, transparent, #fff);
+    
+    }
+    
+    
+    
+    section.contact{
+        margin: 10em 0;
+        width: 90%;
+        height: max-content;
+        padding: 0%;
+        position: relative;
+        left: 5%;
+    
+    }
+    
+    section.contact div{
+        text-align: center;
+    
+    }
+    
+    section.contact div h2{
+        display: inline-block;
+        font-size: 2em;
+        width: max-content;
+        margin-bottom: 1em;
+        border-bottom: solid 0.2em rgb(7, 94, 36) ;
+    }
+    
+    section.contact div p{
+        font-weight: bold;
+    }
+    
+    section.contact form.contact{
+        width: 100%;
+        margin: 0%;
+        height: max-content;
+        padding: 0%;
+    }
+    
+    section.contact form.contact div.input{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 10em;
+        justify-content: space-around;
+        left: 0%;
+    }
+    
+    section.contact form.contact div.input input{
+     outline: none;
+     border: none;
+     height: 25%;
+     border: dashed 3px rgb(7, 94, 36);
+    
+    }
+    
+    section.contact form.contact div.input input::placeholder{
+        font-size: 1.5em;
+        text-align: center;
+     }
+    
+    section.contact form.contact textarea{
+        position: relative;
+        left: 0%;
+        width: 100%;
+        resize: none;
+        outline: none;
+        border: dashed 3px rgb(7, 94, 36);
+        
+    }
+    
+    section.contact form.contact textarea::placeholder{
+        font-size: 1.5em;
+        margin-left: 10%;
+        text-align: center;
+    }
+    
+    section.contact form.contact input.submit{
+        left: 0%;
+        width: 100%;
+        height: 3em;
+        border: none;
+        outline: none;
+        background-color:rgb(7, 94, 36) ;
+        color: #fff;
+        cursor: pointer;
+    
+    }
 }
