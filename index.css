@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Oleo Script';
+    src: url(OleoScript-Regular.ttf);
+}
+
 *{
     margin: 0%;
     padding: 0%;
@@ -32,7 +37,7 @@ header div.logo{
 }
 
 header div.logo h2{
-    font-family: 'Oleo Script';
+    font-family: 'Oleo Script', sans-serif;
     font-weight: lighter;
     font-size: 5em;
     margin: 0px;
@@ -469,6 +474,105 @@ div.menu{
 div.cartbtn1{
     display: none;
 }
+
+#menubox{
+    position: fixed;
+    z-index: 1000;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.973);
+    display: none;
+    border-radius: 5px;
+}
+
+ #menubox.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cartbox{
+    position: fixed;
+    z-index: 1000;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.973);
+    display: none;
+    border-radius: 5px;
+}
+
+ #cartbox.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.x{
+    font-family: 'open sans';
+    font-weight: 900;
+    font-size: 5em;
+    line-height: 0%;
+    margin: .5em;
+    color: #000;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 5px;
+    z-index: 100000;
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    display: none;
+}
+
+.x.active{
+    display: inline-block;
+}
+
+.ul.active{
+    margin: 0%;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    bottom: 0%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    
+}
+
+#menubox .ul.active li{
+    position: relative;
+    font-size: 2em;
+    width: 4em;
+    height: max-content;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.7em;
+    
+}
+
+#menubox .ul.active li::before{
+    content: " ";
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 0.2em;
+    background-color: rgb(7, 94, 36);
+    
+}
+
+
 
 @media (max-width: 600px){
     *{
