@@ -1,0 +1,1368 @@
+@font-face {
+    font-family: 'Oleo Script';
+    src: url(OleoScript-Regular.ttf);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body{
+    margin: 0% auto;
+    padding: 0%;
+    font-family: sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+    margin: 0%;
+    
+    
+
+}
+
+header div.logo{
+    margin: 0em 3em 1.5em 3em;
+    display: inline-block;
+    width: max-content;
+    
+}
+
+header div.logo h2{
+    font-family: 'Oleo Script', sans-serif;
+    font-weight: lighter;
+    font-size: 5em;
+    margin: 0px;
+    padding: 0%;
+
+    
+}
+
+header div.logo p{
+    font-family: 'Oleo Script';
+    font-size: 1.5em;
+    margin: 0px;
+    padding: 0%;
+    display: flex;
+    justify-content: flex-end;
+    line-height: 0%;
+    cursor: pointer;
+    
+    
+}
+
+header nav{
+    width: 100%;
+}
+
+header nav ul{
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+
+header nav ul li{
+    list-style: none;
+    position: relative;
+    font-size: 2em;
+    width: 4em;
+    height: max-content;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.7em;
+    transition: all 0.3s ease;
+}
+
+header nav ul li::before{
+    content: " ";
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    width: 0%;
+    height: 0.2em;
+    background-color: rgb(7, 94, 36);
+    transition: all 0.3s ease;
+}
+
+header nav ul li:hover{
+    color: rgb(7, 94, 36);
+}
+
+header nav ul li:hover::before{
+    left: 0%;
+    width: 100%;
+}
+
+
+section.home{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 5vh 0%;
+    padding: 0%;
+    background-image: url(fondo.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-attachment: fixed;
+    width: 80%;
+    height: 70vh;
+    position: relative;
+    left: 10%;
+    border-radius: 5px;
+    
+}
+
+section h2{
+    padding: 0 10px;
+    z-index: 1;
+}
+
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.808);
+    position: absolute;
+    border-radius: 5px;
+    
+}
+
+section.shop{
+    margin: 10em 0;
+    width: 80%;
+    height: max-content;
+    position: relative;
+    left: 10%;
+    padding: 0%;
+    padding-top: 2em;
+    text-align: center;
+    
+  
+}
+
+section.shop div{
+    text-align: center;
+}
+
+section.shop div h2{
+    display: inline-block;
+    font-size: 2em;
+    width: max-content;
+    margin-bottom: 1em;
+    border-bottom: solid 0.2em rgb(7, 94, 36) ;
+}
+
+
+
+section.shop  div p{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+section.shop div.arts{
+    margin: 2em 0;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-auto-rows: max-content;
+    gap: 2em;
+    width: 100%;
+    height: max-content;
+    
+}
+
+.shop .arts div.item{
+    position: relative;
+    box-shadow: 1px 3px 5px #000;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.shop .arts div .details{
+    position: absolute;
+    text-transform: capitalize;
+    bottom: -7em;
+    display: flex;
+    justify-content: space-around;
+    text-align: start;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 10em;
+    cursor: default;
+}
+
+.shop .arts div .details p{
+    margin-left: 1em;
+}
+
+.shop .arts .item:hover > .details{
+    bottom: 0%;
+}
+
+
+
+.shop .arts div.item::before{
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 3em;
+    background-color:rgba(255, 255, 255, 0.815);
+    transition: all 0.3s ease;
+
+}
+
+.shop .arts div.item:hover:before{
+    background: #fff;
+    height: 10em;
+
+}
+
+.shop div img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+div.homebtn{
+    position: fixed;
+    width: 5%;
+    height: 10%;
+    left: 2%;
+    bottom: 5%;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+}
+
+div.homebtn img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+div.cartbtn{
+    position: fixed;
+    width: 5%;
+    height: 10%;
+    left: 2%;
+    bottom: 20%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div.cartbtn img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    
+}
+
+section.about{
+    margin: 10em 0;
+    width: 80%;
+    height: max-content;
+    padding: 0%;
+    position: relative;
+    left: 10%;  
+    display: block;
+    margin-bottom: 20em;
+}
+
+section.about div{
+    text-align: center;
+
+}
+
+section.about div h2{
+    display: inline-block;
+    font-size: 2em;
+    width: max-content;
+    margin-bottom: 1em;
+    border-bottom: solid 0.2em rgb(7, 94, 36) ;
+}
+
+section.about div.info{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: max-content;
+    width: 100%;
+    height: max-content;
+    
+}
+
+section.about div.info div:nth-child(1){
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 20em;
+    background-image: url(fondo.jpg);
+    background-attachment: fixed;
+    position: relative;
+}
+
+section.about div.info div:nth-child(1)::before{
+    content: " ";
+    display: block;
+    position: relative;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, transparent, #fff);
+
+}
+
+
+section.about div.info div:nth-child(2){
+    width: 100%;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+section.about div.info div:nth-child(2) p{
+    font-size: 2em;
+    margin: 1em 1em;
+    
+}
+
+section.about div.info div:nth-child(3){
+    width: 100%;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    text-align: right;
+}
+
+section.about div.info div:nth-child(3) p{
+    font-size: 2em;
+    margin: 1em 1em;
+    
+}
+
+section.about div.info div:nth-child(4){
+    border-bottom-left-radius: 5px;
+    width: 100%;
+    height: 20em;
+    background: url(fondo.jpg);
+    background-attachment: fixed;
+}
+
+section.about div.info div:nth-child(4)::before{
+    content: " ";
+    position: relative;
+    display: block;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent, #fff);
+
+}
+
+
+
+
+
+section.contact{
+    margin-bottom: 5em;
+    width: 80%;
+    height: max-content;
+    padding: 0%;
+    position: relative;
+    left: 10%;
+
+}
+
+section.contact div{
+    text-align: center;
+    margin: 5em;
+
+}
+
+section.contact div h2{
+    display: inline-block;
+    font-size: 2em;
+    width: max-content;
+    margin-bottom: 1em;
+    border-bottom: solid 0.2em rgb(7, 94, 36) ;
+}
+
+section.contact div p{
+    font-weight: bold;
+}
+
+section.contact form.contact{
+    width: 100%;
+    height: max-content;
+    position: relative;
+}
+
+section.contact form.contact div.input{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 12em;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+section.contact form.contact div.input input{
+ outline: none;
+ border: none;
+ height: 25%;
+ border: dashed 3px rgb(7, 94, 36);
+
+}
+
+section.contact form.contact div.input input::placeholder{
+    font-size: 1.5em;
+    text-align: center;
+ }
+
+section.contact form.contact textarea{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    width: 40%;
+    resize: none;
+    outline: none;
+    border: dashed 3px rgb(7, 94, 36);
+    height: 14.5em;
+    
+}
+
+section.contact form.contact textarea::placeholder{
+    font-size: 1.5em;
+    margin-left: 10%;
+    text-align: center;
+}
+
+section.contact form.contact input.submit{
+    position: relative;
+    top: 0%;
+    left: 80%;
+    width: 10%;
+    height: 3em;
+    border: none;
+    outline: none;
+    background-color:rgb(7, 94, 36) ;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+div.menu{
+    display: none;
+}
+
+div.cartbtn1{
+    display: none;
+}
+
+button.addbtn{
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    right: 0;
+    bottom: 0;
+    margin: 1em;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+button.addbtn img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    
+}
+
+#menubox{
+    position: fixed;
+    z-index: 1000;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.973);
+    display: none;
+    border-radius: 5px;
+}
+
+ #menubox.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cartbox{
+    position: fixed;
+    z-index: 1000;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.973);
+    display: none;
+    border-radius: 5px;
+}
+
+ #cartbox.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cartbox .cartcontainer{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#cartbox .cartcontainer h2{
+    width: 100%;
+    height: max-content;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: .2em;
+    border-bottom: solid 2px rgba(7, 94, 36, 0.795) ;
+}
+
+
+#cartbox .cartcontainer .cartinfo{
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 50% 20% 30%;
+    grid-template-rows: 3em;
+    gap: 10px;
+    margin-bottom: .2em;
+}
+
+#cartbox .cartcontainer .cartinfo .cart-header{
+    border-bottom: solid 2px rgba(7, 94, 36, 0.795) ;
+    height: max-content;
+    padding-left: .1em;
+
+}
+
+#cartbox .cartcontainer .cartinfo .cart-header h6{
+    font-size: 2em;
+}
+
+#cartbox .cartcontainer .total{
+    position: absolute;
+    font-size: 2em;
+    bottom: .3em;
+    margin: .2em;
+    width: 100%;
+    background-color:rgb(231, 79, 79);
+    
+}
+
+#cartbox .cartcontainer .total p{
+    float: left;
+    margin: .1em;
+    bottom: 0%;
+    border-bottom: solid 3px rgba(7, 94, 36, 0.795) ;
+}
+
+#cartbox .cartcontainer .total button{
+    position: absolute;
+    font-size: 1em;
+    left: 90%;
+    bottom: 0%;
+    width: max-content;
+    height: max-content;
+    padding: .3em .4em;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 3px rgba(7, 94, 36, 0.795) ;
+    color: #000;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#cartbox .cartcontainer .total button:hover{
+    background-color: rgb(7, 94, 36);
+    color: #fff;
+    border-radius: 5px;
+}
+
+#cartbox .cartcontainer .cartItemsContainer {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 68%;
+}
+
+
+#cartbox .cartcontainer .cartItemsContainer .cartItem{
+    width: 100%;
+    height: 30%;
+    display: grid;
+    grid-template-columns: 50% 20% 30%;
+    grid-template-rows: 4.2em;
+    gap: 10px;
+    margin-bottom: .2em;
+    padding-bottom: .2em ;
+}
+
+#cartbox .cartcontainer .cartItemsContainer .cartItemInfo{
+    border-bottom: solid 2px rgba(7, 94, 36, 0.795) ;
+    height: 4.5em;
+    padding-left: .1em;
+    font-size: 1.5em;
+    font-weight: lighter;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+}
+
+#cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartImage{
+    width: 4em;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    margin: .5em;
+
+}
+
+#cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemName{
+      font-size: 1.5em;
+      font-weight: lighter;
+}
+
+#cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemSize{
+    margin-left: 3em;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+#cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemQuantity {
+    max-width: 3em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eee;
+    padding: 5px;
+    font-size: 1em;
+  }
+ 
+  #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .buttonDelete {
+        position: absolute;
+        font-size: 1em;
+        left: 80%;
+        width: 2em;
+        height: 2em;
+        padding: 0 .2em;
+        background-color: rgb(233, 34, 34);
+        border: none;;
+        color: #fff;
+        cursor: pointer;
+        transition: all .2s ease;
+        border-radius: 5px;
+
+  }
+
+  #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .buttonDelete:hover{
+    background-color: rgb(231, 79, 79);
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+.x{
+    font-family: 'open sans';
+    font-weight: 900;
+    font-size: 3em;
+    line-height: 0%;
+    margin: .5em;
+    color: #000;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 5px;
+    z-index: 100000;
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    display: none;
+}
+
+.x.active{
+    display: inline-block;
+}
+
+.ul.active{
+    margin: 0%;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    bottom: 0%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    
+}
+
+
+#menubox .ul.active li{
+    position: relative;
+    font-size: 2em;
+    width: 4em;
+    height: max-content;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.7em;
+    
+}
+
+#menubox .ul.active li::before{
+    content: " ";
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 0.2em;
+    background-color: rgb(7, 94, 36);
+    
+}
+
+.cartQ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(7, 94, 36);
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    left: 80%;
+    bottom: 60%;
+    width: 50%;
+    height: 50%;
+    
+    
+}
+
+@media (max-width: 600px){
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    
+    }
+    
+    body{
+        margin: 0%;
+        padding: 0%;
+        font-family: sans-serif;
+        width: 100%;
+    }
+    
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px;
+        width: 100%;
+        margin: 0%;
+    
+    }
+    
+    header div.logo{
+        margin: 1em;
+        display: inline-block;
+        width: 20%;
+        cursor: pointer;
+       
+    }
+    
+    header div.logo h2{
+        font-family: 'Oleo Script';
+        font-weight: lighter;
+        font-size: 2em;
+        margin: 0px;
+        padding: 0%;
+
+    }
+    
+    header div.logo p{
+        font-family: 'Oleo Script';
+        font-size: 1em;
+        margin: 0px;
+        padding: 0%;
+        display: flex;
+        justify-content: flex-end;
+        line-height: 0%;
+        cursor: pointer;
+        
+        
+    }
+    
+    header nav{ 
+        display: none;
+    }
+    
+    header div.menu{
+        display: inline-block;
+        width: 20%;
+        margin: 1em 1em;
+        cursor: pointer;
+    }
+
+    header div.menu img{
+        width: 100%;
+        height: auto;
+    }
+
+    div.homebtn{
+        display: none;
+    }
+
+    div.cartbtn{
+       display: none;
+    }
+  
+    div.cartbtn1{
+        display: inline-block;
+        width: 20%;
+        height: auto;
+        margin: 1em 1em;
+        cursor: pointer;
+        position: relative;
+     }
+
+     div.cartbtn1 img{
+        width: 100%;
+        height: auto;
+     }
+   
+    
+    section.home{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        color: #fff;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 1em 0%;
+        padding: 0%;
+        background-image: url(fondo.jpg);
+        background-size: cover;
+        background-position-x: center;
+        background-attachment: fixed;
+        width: 90%;
+        height: 70vh;
+        position: relative;
+        left: 5%;
+        border-radius: 5px;
+        
+    }
+    
+    section.home h2{
+        padding: 0 1em;
+        z-index: 1;
+    }
+    
+    .overlay{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.658);
+        position: absolute;
+        border-radius: 5px;
+    }
+    
+    section.shop{
+        margin: 10em 0;
+        width: 90%;
+        height: max-content;
+        position: relative;
+        left: 5%;
+        padding: 0%;
+        text-align: center;
+        
+      
+    }
+    
+    section.shop div{
+        text-align: center;
+    }
+    
+    section.shop div h2{
+        display: inline-block;
+        font-size: 2em;
+        width: max-content;
+        margin-bottom: 1em;
+        border-bottom: solid 0.2em rgb(7, 94, 36) ;
+    }
+    
+    
+    
+    section.shop  div p{
+        font-size: 1em;
+        font-weight: bold;
+    }
+    
+    section.shop div.arts{
+        margin: 2em 0;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-auto-rows: max-content;
+        gap: 2em;
+        width: 100%;
+        height: max-content;
+        
+    }
+    
+    .shop .arts div.item{
+        position: relative;
+        box-shadow: 1px 3px 5px #000;
+        height: 10em;
+        width: auto;
+        cursor: pointer;
+        overflow: hidden;
+    
+    }
+    
+    .shop .arts div .details{
+        position: absolute;
+        text-transform: capitalize;
+        bottom: -7em;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        transition: all 0.3s ease;
+        width: 100%;
+        height: 10em;
+        
+    }
+    
+    
+    .shop .arts .item:hover > .details{
+        bottom: 0%;
+    }
+    
+    
+    
+    .shop .arts div.item::before{
+        content: "";
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+        width: 100%;
+        height: 3em;
+        background-color:rgba(255, 255, 255, 0.815);
+        transition: all 0.3s ease;
+    
+    }
+    
+    .shop .arts div.item:hover:before{
+        background: #fff;
+        height: 10em;
+    
+    }
+    
+    .shop div img{
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    
+    
+    section.about{
+        margin: 10em 0;
+        width: 90%;
+        height: max-content;
+        padding: 0%;
+        left: 5%;  
+    }
+    
+    section.about div{
+        text-align: center;
+    
+    }
+    
+    section.about div h2{
+        display: inline-block;
+        font-size: 2em;
+        width: max-content;
+        margin-bottom: 1em;
+        border-bottom: solid 0.2em rgb(7, 94, 36) ;
+    }
+    
+    section.about div.info{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-auto-rows: max-content;
+        width: 100%;
+        height: max-content;
+        
+    }
+    
+    section.about div.info div:nth-child(1){
+        border-top-right-radius: 5px;
+        width: 100%;
+        height: 10em;
+        background-image: url(fondo.jpg);
+        background-attachment: fixed;
+        position: relative;
+    }
+    
+    section.about div.info div:nth-child(1)::before{
+        content: " ";
+        display: block;
+        position: relative;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to left, transparent, #fff);
+    
+    }
+    
+    
+    section.about div.info div:nth-child(2){
+        width: 100%;
+        height: 10em;
+        display: flex;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    section.about div.info div:nth-child(2) p{
+        font-size: 1em;
+        margin: .5em .5em;
+        
+    }
+    
+    section.about div.info div:nth-child(3){
+        width: 100%;
+        height: 10em;
+        display: flex;
+        justify-content: center;
+        text-align: right;
+        
+    }
+    
+    section.about div.info div:nth-child(3) p{
+        font-size: 1em;
+        margin: .5em .5em;
+        
+    }
+    
+    section.about div.info div:nth-child(4){
+        border-bottom-left-radius: 5px;
+        width: 100%;
+        height: 10em;
+        background: url(fondo.jpg);
+        background-attachment: fixed;
+    
+    }
+    
+    section.about div.info div:nth-child(4)::before{
+        content: " ";
+        position: relative;
+        display: block;
+        right: 0%;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, transparent, #fff);
+    
+    }
+    
+    
+    
+    section.contact{
+        margin: 10em 0;
+        width: 90%;
+        height: max-content;
+        padding: 0%;
+        position: relative;
+        left: 5%;
+    
+    }
+    
+    section.contact div{
+        text-align: center;
+        margin: 1em 0;
+    }
+    
+    section.contact div h2{
+        display: inline-block;
+        font-size: 2em;
+        width: max-content;
+        margin-bottom: 1em;
+        border-bottom: solid 0.2em rgb(7, 94, 36) ;
+    }
+    
+    section.contact div p{
+        font-weight: bold;
+    }
+    
+    section.contact form.contact{
+        width: 100%;
+        margin: 0%;
+        height: max-content;
+        padding: 0%;
+    }
+    
+    section.contact form.contact div.input{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 12em;
+        justify-content: space-between;
+        left: 0%;
+        margin: 1em 0;
+    }
+    
+    section.contact form.contact div.input input{
+     outline: none;
+     border: none;
+     height: 25%;
+     border: dashed 3px rgb(7, 94, 36);
+    
+    
+    }
+    
+    section.contact form.contact div.input input::placeholder{
+        font-size: 1.5em;
+        text-align: center;
+     }
+    
+    section.contact form.contact textarea{
+        position: relative;
+        left: 0%;
+        width: 100%;
+        resize: none;
+        outline: none;
+        border: dashed 3px rgb(7, 94, 36);
+        
+    }
+    
+    section.contact form.contact textarea::placeholder{
+        font-size: 1.5em;
+        margin-left: 10%;
+        text-align: center;
+    }
+    
+    section.contact form.contact input.submit{
+        left: 0%;
+        width: 100%;
+        height: 3em;
+        border: none;
+        outline: none;
+        background-color:rgb(7, 94, 36) ;
+        color: #fff;
+        cursor: pointer;
+        margin: 1em 0;
+    
+    }
+
+    button.addbtn{
+        position: absolute;
+        width: 3em;
+        height: 3em;
+        right: 0;
+        bottom: 0;
+        margin: 1em;
+        outline: none;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    
+    }
+
+    #cartbox .cartcontainer{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    #cartbox .cartcontainer h2{
+        width: 100%;
+        height: max-content;
+        font-size: 2em;
+        text-align: center;
+        margin-top: 2em;
+        margin-bottom: .2em;
+        border-bottom: solid 2px rgba(7, 94, 36, 0.795) ;
+    }
+    
+    
+    #cartbox .cartcontainer .cartinfo{
+        width: 100%;
+        height: max-content;
+        display: grid;
+        grid-template-columns: 50% 20% 30%;
+        grid-template-rows: 3em;
+        gap: 10px;
+        margin-bottom: 0%;
+    }
+    
+    #cartbox .cartcontainer .cartinfo .cart-header{
+        border-bottom: solid 2px rgba(7, 94, 36, 0.795) ;
+        height: max-content;
+        padding-left: .1em;
+        font-size: 1em;
+    
+    }
+    
+    #cartbox .cartcontainer .cartinfo .cart-header h6{
+        font-size: 1em;
+    }
+    
+    #cartbox .cartcontainer .total{
+        position: absolute;
+        font-size: 1.5em;
+        bottom: .3em;
+        margin: .2em;
+        width: 100%;
+        
+    }
+    
+    #cartbox .cartcontainer .total p{
+        float: left;
+        margin: .1em;
+        bottom: 0%;
+        border-bottom: solid 3px rgba(7, 94, 36, 0.795) ;
+    }
+    
+    #cartbox .cartcontainer .total button{
+        position: absolute;
+        font-size: 1em;
+        left: 75%;
+        bottom: 0%;
+        width: max-content;
+        height: max-content;
+        padding: .3em .4em;
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 3px rgba(7, 94, 36, 0.795) ;
+        color: #000;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+    
+    #cartbox .cartcontainer .total button:hover{
+        background-color: rgb(7, 94, 36);
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    
+    #cartbox .cartcontainer .cartItemsContainer .cartItem{
+        width: 100%;
+        height: max-content;
+        display: grid;
+        grid-template-columns: 50% 20% 30%;
+        grid-template-rows: 4.2em;
+        gap: 10px;
+        margin-bottom: .2em;
+        padding-bottom: .2em ;
+    }
+    
+    #cartbox .cartcontainer .cartItemsContainer .cartItemInfo{
+        border-bottom: solid 2px rgba(7, 94, 36, 0.795) ;
+        height: 4.5em;
+        padding-left: .1em;
+        font-size: 1em;
+        font-weight: lighter;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+    
+    }
+    
+    #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartImage{
+        width: 3em;
+        height: auto;
+        border-radius: 5px;
+        object-fit: cover;
+        margin: .2em;
+    
+    }
+    
+    #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemName{
+        margin-left: 1em;
+          font-size: 1em;
+          font-weight: lighter;
+    }
+    
+    #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemSize{
+        display: none;
+    }
+    
+    #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemQuantity {
+        max-width: 2em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #eee;
+        padding: 5px;
+        font-size: 1em;
+      }
+     
+      #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .buttonDelete {
+           position: absolute;
+            font-size: 1em;
+            left: 40%;
+            width: 2em;
+            height: 2em;
+            padding: 0 .2em;
+            background-color: rgb(233, 34, 34);
+            border: none;;
+            color: #fff;
+            cursor: pointer;
+            transition: all .2s ease;
+            border-radius: 5px;
+    
+      }
+    
+      #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .buttonDelete:hover{
+        background-color: rgb(231, 79, 79);
+        color: #fff;
+        border-radius: 5px;
+    }
+    
+    
+}
