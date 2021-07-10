@@ -642,7 +642,7 @@ button.addbtn img{
     height: 4.5em;
     padding-left: .1em;
     font-size: 1.5em;
-    font-weight: lighter;
+    font-weight: bold;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -661,13 +661,13 @@ button.addbtn img{
 
 #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemName{
       font-size: 1.5em;
-      font-weight: lighter;
+      font-weight: bold;
 }
 
 #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemSize{
     margin-left: 10%;
     font-size: 1.5em;
-    font-weight: lighter;
+    font-weight: bold;
 }
 
 #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemQuantity {
@@ -1349,7 +1349,7 @@ button.addbtn img{
         height: 4.5em;
         padding-left: .1em;
         font-size: 1em;
-        font-weight: lighter;
+        font-weight: bold;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -1369,7 +1369,7 @@ button.addbtn img{
     #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemName{
         margin-left: 1em;
           font-size: 1em;
-          font-weight: lighter;
+          font-weight: bold;
     }
     
     #cartbox .cartcontainer .cartItemsContainer .cartItemInfo .cartItemSize{
