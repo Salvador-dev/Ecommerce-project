@@ -138,10 +138,10 @@ section h2{
 .overlay{
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.808);
+    background-color: rgba(0, 0, 0, 0.644);
     position: absolute;
     border-radius: 5px;
-    
+    backdrop-filter: blur(5px);
 }
 
 section.shop{
@@ -259,6 +259,10 @@ div.homebtn img{
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+div.homebtn1{
+    display: none;
 }
 
 div.cartbtn{
@@ -812,6 +816,16 @@ button.addbtn img{
 
 }
 
+.itemDetails{
+    display: flex;
+    position: absolute;
+    justify-items: center;
+    align-items: center;
+    bottom: 1em;
+    width: 100%;
+    height: max-content;
+}
+
 @media (max-width: 600px){
     *{
         margin: 0%;
@@ -888,6 +902,23 @@ button.addbtn img{
         display: none;
     }
 
+    div.homebtn1{
+        display: inline-block;
+        position: absolute;
+        width: 3em;
+        height: 3em;
+        right: 0;
+        top: 0;
+        margin: .5em;
+        cursor: pointer;
+    }
+
+    div.homebtn1 img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
     div.cartbtn{
        display: none;
     }
@@ -936,9 +967,10 @@ button.addbtn img{
     .overlay{
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.658);
+        background-color: rgba(0, 0, 0, 0.644);
         position: absolute;
         border-radius: 5px;
+        backdrop-filter: blur(5px);
     }
     
     section.shop{
