@@ -7,6 +7,7 @@ const menubox = document.createElement("DIV")
 const cartbox = document.getElementById("cartbox")
 
 
+
 menubox.id = "menubox"
 document.body.appendChild(menubox)
 
@@ -77,12 +78,12 @@ function addToCartClicked(event){
     const tittle = item.querySelector(".details .tittle").textContent
     const price = item.querySelector(".details .price").textContent
     const size = item.querySelector(".details .size").textContent
-    const image = item.querySelector(".image").src
+    const Image = item.querySelector(".image").src
   
-    addItemToCart(tittle, price, size, image);
+    addItemToCart(tittle, price, size, Image);
 }
 
-function addItemToCart(tittle, price, size, image){
+function addItemToCart(tittle, price, size, Image){
 
     const elementsTittle = cartItemsContainer.getElementsByClassName("cartItemName")
   
@@ -102,7 +103,7 @@ function addItemToCart(tittle, price, size, image){
   <div class="cartItem">
 
   <div class="cartItemInfo">
-  <img src=${image} class="cartImage">
+  <img src=${Image} class="cartImage">
   <h6 class="cartItemName">${tittle}</h6>
   <h6 class="cartItemSize">${size}</h6>
   </div>
@@ -241,14 +242,59 @@ function updateShoppingCartTotal(){
     images.forEach(image => {
     image.addEventListener('click', e => {
       lightbox.classList.add('active') 
-    
+
+      const imgItem = event.target
+      const itemDetails = imgItem.parentElement.querySelector(".details")
+
+    const tittle = itemDetails.querySelector(".details .tittle").textContent
+    const price = itemDetails.querySelector(".details .price").textContent
+    const size = itemDetails.querySelector(".details .size").textContent
+
+    const itemRow = document.createElement('div');
+    itemRow.innerHTML = `
+     <div class="itemDetails">
+
+     <h6 class="dtlsName">${tittle}</h6>
+     <h6 class="dtlsSize">${size}</h6>
+
+
+     <h6 class="dtlsPrice">${price}</h6>
+ 
+     <button class="dtlsbtn"><img src="addtocart.svg" alt=""></button>
+       `;
+
+
       const img = document.createElement('img')
       img.src = image.src
       while (lightbox.firstChild){
           lightbox.removeChild(lightbox.firstChild)
       }
+
+      while (lightbox.lastChild){
+        lightbox.removeChild(lightbox.lastChild)
+    }
+
+
+
+      
       lightbox.appendChild(img)
       lightbox.appendChild(x)
+      lightbox.appendChild(itemRow)
       x.classList.add("active")
+
+      const dtlsbtn = itemRow.querySelector(".dtlsbtn")
+
+      dtlsbtn.addEventListener("click", ()=>{
+
+        const tittle = image.parentElement.querySelector(".addbtn").closest(".item").querySelector(".details .tittle").textContent
+        const price = image.parentElement.querySelector(".addbtn").closest(".item").querySelector(".details .price").textContent
+        const size = image.parentElement.querySelector(".addbtn").closest(".item").querySelector(".details .size").textContent
+        const Image= image.parentElement.querySelector(".addbtn").closest(".item").querySelector(".image").src
+  
+  
+    
+        addItemToCart(tittle, price, size, Image);
+  
+      })
     })
 })
