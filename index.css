@@ -444,6 +444,10 @@ section.contact form.contact div.input input::placeholder{
     text-align: center;
  }
 
+ section.contact form.contact div.input input:focus{
+    background-color: rgba(96, 247, 146, 0.253) ;
+ }
+
 section.contact form.contact textarea{
     position: absolute;
     left: 50%;
@@ -461,6 +465,10 @@ section.contact form.contact textarea::placeholder{
     margin-left: 10%;
     text-align: center;
 }
+
+section.contact form.contact textarea:focus{
+    background-color: rgba(96, 247, 146, 0.253) ;
+ }
 
 section.contact form.contact input.submit{
     position: relative;
@@ -806,24 +814,49 @@ button.addbtn img{
 
  #lightbox.active{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
 #lightbox img{
-    max-width: 95%;
-    max-height: 95%;
+    max-width: 80%;
+    max-height: 80%;
 
 }
 
 .itemDetails{
-    display: flex;
     position: absolute;
-    justify-items: center;
+    left: 0%;
+    bottom: .5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    bottom: 1em;
-    width: 100%;
     height: max-content;
+    width: 100%;
+    font-size: 2em;
+}
+
+.itemDetails .dtlsbtn{
+    width: 3em;
+    height: 3em;
+    margin: 1em;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.itemDetails h6{
+    border-bottom: solid 2px rgba(7, 94, 36, 0.795) ;
+}
+
+.itemDetails .dtlsbtn img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
 }
 
 @media (max-width: 600px){
@@ -1454,5 +1487,22 @@ button.addbtn img{
         width: 50%;
         height: 50%;
         
+    }
+
+    #lightbox.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #lightbox img{
+        max-width: 95%;
+        max-height: 95%;
+    
+    }
+
+    .itemDetails{
+        font-size: 2em;
     }
 }
