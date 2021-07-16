@@ -435,7 +435,8 @@ section.contact form.contact div.input input{
  outline: none;
  border: none;
  height: 25%;
- border: dashed 3px rgb(7, 94, 36);
+ border: solid 3px rgb(7, 94, 36);
+    border-radius: 10px;
 
 }
 
@@ -455,7 +456,8 @@ section.contact form.contact textarea{
     width: 40%;
     resize: none;
     outline: none;
-    border: dashed 3px rgb(7, 94, 36);
+    border: solid 3px rgb(7, 94, 36);
+    border-radius: 10px;
     height: 14.5em;
     
 }
@@ -1259,7 +1261,8 @@ button.addbtn img{
      outline: none;
      border: none;
      height: 25%;
-     border: dashed 3px rgb(7, 94, 36);
+     border: solid 3px rgb(7, 94, 36);
+    border-radius: 10px;
     
     
     }
@@ -1275,7 +1278,8 @@ button.addbtn img{
         width: 100%;
         resize: none;
         outline: none;
-        border: dashed 3px rgb(7, 94, 36);
+        border: solid 3px rgb(7, 94, 36);
+    border-radius: 10px;
         
     }
     
